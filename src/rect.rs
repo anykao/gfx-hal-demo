@@ -133,7 +133,7 @@ fn main() {
     // The shader is loaded from SPIR-V binary files.
     let vertex_shader_module = {
         // let spirv = include_bytes!("../../assets/gen/shaders/part00.vert.spv");
-        let glsl = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/triangle.vert"));
+        let glsl = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/rect.vert"));
         let spirv: Vec<u8> = glsl_to_spirv::compile(&glsl, glsl_to_spirv::ShaderType::Vertex)
             .unwrap()
             .bytes()
@@ -144,7 +144,7 @@ fn main() {
 
     let fragment_shader_module = {
         // let spirv = include_bytes!("../../assets/gen/shaders/part00.frag.spv");
-        let glsl = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/triangle.frag"));
+        let glsl = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/assets/rect.frag"));
         let spirv: Vec<u8> = glsl_to_spirv::compile(&glsl, glsl_to_spirv::ShaderType::Fragment)
             .unwrap()
             .bytes()
