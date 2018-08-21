@@ -13,3 +13,15 @@ git = "https://github.com/gfx-rs/gfx"
 
 [dependencies.gfx-hal]
 git = "https://github.com/gfx-rs/gfx"
+
+[[bin]]
+path = "./src/main.rs"
+name = "main"
+
+[[bin]]
+path = "./src/rect.rs"
+name = "rect"
+
+[[bin]]
+path = "./src/triangle.rs"
+name = "triangle"
